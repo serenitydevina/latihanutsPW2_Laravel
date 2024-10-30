@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::get('/buku',[BukuController::class,'index']);
 Route::post('/buku',[BukuController::class,'store']);
 Route::patch('/buku/{buku}',[BukuController::class,'update']);
 Route::delete('/buku/{buku}',[BukuController::class,'destroy']);
+Route::post('register',[RegisterController::class,'register']);
+Route::post('login',[RegisterController::class,'login']);
