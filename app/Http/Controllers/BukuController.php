@@ -15,7 +15,7 @@ class BukuController extends Controller
     public function index()
     {
         $buku = Buku::all();
-        $data['sucess'] = true;
+        $data['success'] = true;
         $data['message'] = 'Data Buku';
         $data['result'] = $buku;
         return response()->json($data,Response::HTTP_OK);
